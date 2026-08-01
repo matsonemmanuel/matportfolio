@@ -1,6 +1,9 @@
-function App() {
+  function App() {
   return (
-    <h1>Hello Portfolio!</h1>
+    <div>
+      <h1>Hello Portfolio!</h1>
+      <p>This is my portfolio!</p>
+    </div>
   );
 }
 
