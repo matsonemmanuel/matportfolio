@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { navigation } from "../constants/navigation";
+import { FiMenu, FiX } from "react-icons/fi";
 
 function Navbar() {
   
@@ -11,13 +12,17 @@ function Navbar() {
     <nav className="fixed top-0 left-0 w-full bg-slate-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
 
+        
         {/* Logo */}
-        <div className="text-cyan-400 text-3xl font-bold cursor-pointer">
+        <a
+          href="#home"
+          className="text-cyan-400 text-3xl font-bold cursor-pointer"
+        >
           {"<EM />"}
-        </div>
+        </a>
 
         {/* Navigation Links */}
-        <ul className="flex gap-8">
+        <ul className="hidden md:flex gap-8">
           {navigation.map((item) => (
             <li key={item.id}>
               <a
@@ -31,27 +36,44 @@ function Navbar() {
         </ul>
 
         {/* Download CV Button */}
-        <button className="bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition duration-300">
+        <button
+          className="hidden md:block bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition duration-300"
+        >
           Download CV
+        </button>
+
+        <button
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className="md:hidden text-cyan-400 text-3xl"
+        >
+          {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
 
       </div>
 
-      {/* Temporary State Test */}
-<div className="mt-24 text-center">
+      {isMenuOpen && (
+        <div className="md:hidden bg-slate-800 px-8 py-6">
+          <ul className="flex flex-col gap-6">
+            {navigation.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-white hover:text-cyan-400 transition"
+                >
+                  {item.title}
+                </a>
+              </li>
+            ))}
 
-  <button
-    onClick={() => setIsMenuOpen(!isMenuOpen)}
-    className="bg-red-500 text-white px-6 py-2 rounded"
-  >
-    Toggle Menu
-  </button>
+            <button className="bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold">
+              Download CV
+            </button>
+          </ul>
+        </div>
+      )}
 
-  <p className="text-white mt-4">
-    {isMenuOpen ? "Menu is Open" : "Menu is Closed"}
-  </p>
-
-</div>
+      
     </nav>
   );
 }
