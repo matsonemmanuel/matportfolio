@@ -1,12 +1,9 @@
-  function App() {
+function App() {
   return (
-    <div>
-      <h1>Hello Portfolio!</h1>
-      <p>This is my portfolio!</p>
-
-      <h1>About Me</h1>
-      <p>I am a passionate developer with experience in creating modern web applications.</p>
-      <p>I have a strong foundation in JavaScript, React, and Node.js.</p>
+    <div className="min-h-screen flex items-center justify-center bg-slate-900">
+      <h1 className="text-5xl font-bold text-cyan-400">
+        Hello Portfolio 🚀
+      </h1>
     </div>
   );
 }
