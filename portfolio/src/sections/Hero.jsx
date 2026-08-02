@@ -5,7 +5,7 @@ function Hero() {
   return (
     <section
       id="home"
-      className="min-h-screen bg-slate-900 pt-28"
+      className="min-h-screen bg-slate-900 pt-28 pb-20"
     >
       <div className="max-w-7xl mx-auto px-8 h-full">
 
@@ -46,11 +46,12 @@ function Hero() {
                 href="#projects"
                 className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-xl font-semibold text-center hover:bg-cyan-300 hover:scale-105 transition-all duration-300 shadow-lg"
               >
-                Explore My work
+                Explore My Work
               </a>
 
               <a
                 href="/cv.pdf"
+                download
                 className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-xl font-semibold text-center hover:bg-cyan-400 hover:text-slate-900 hover:scale-105 transition-all duration-300"
               >
                 Download CV
