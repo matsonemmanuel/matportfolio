@@ -1,4 +1,4 @@
-import { skills } from "../constants/skills";
+import { skills } from "../data/skills";
 
 function Skills() {
   return (
@@ -46,7 +46,7 @@ function Skills() {
                 border-slate-700
                 hover:border-cyan-400
                 hover:-translate-y-2
-                hover:scale-[1.02]
+                hover:scale-[1.01]
                 hover:shadow-[0_0_30px_rgba(34,211,238,0.15)]
                 transition-all
                 duration-300

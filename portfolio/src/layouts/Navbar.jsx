@@ -9,7 +9,7 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-900 shadow-lg">
+    <nav className="fixed top-0 left-0 w-full bg-slate-900 shadow-lg z-50">
       <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
 
         
@@ -36,19 +36,21 @@ function Navbar() {
         </ul>
 
         {/* Download CV Button */}
-        <button
-          className="hidden md:block bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 hover:scale-105 transition-all duration-300"
+        <a
+          href="/cv.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hidden md:inline-flex items-center bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 hover:scale-105 transition-all duration-300"
         >
           Download CV
-        </button>
+        </a>
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-cyan-400 text-3xl hover:scale-110 transition-transform duration-300"
+          className="md:hidden text-cyan-400 text-3xl cursor-pointer hover:scale-110 transition-transform duration-300"
         >
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
-
       </div>
 
       {isMenuOpen && (
@@ -68,6 +70,16 @@ function Navbar() {
 
             
           </ul>
+
+          <a
+            href="/cv.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMenuOpen(false)}
+            className="mt-8 block text-center bg-cyan-400 text-slate-900 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition"
+          >
+            Download CV
+          </a>
         </div>
       )}
 
