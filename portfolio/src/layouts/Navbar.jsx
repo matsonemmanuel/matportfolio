@@ -1,6 +1,12 @@
+
+
+import { useState } from "react";
 import { navigation } from "../constants/navigation";
 
 function Navbar() {
+  
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
     <nav className="fixed top-0 left-0 w-full bg-slate-900 shadow-lg">
       <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
@@ -30,6 +36,22 @@ function Navbar() {
         </button>
 
       </div>
+
+      {/* Temporary State Test */}
+<div className="mt-24 text-center">
+
+  <button
+    onClick={() => setIsMenuOpen(!isMenuOpen)}
+    className="bg-red-500 text-white px-6 py-2 rounded"
+  >
+    Toggle Menu
+  </button>
+
+  <p className="text-white mt-4">
+    {isMenuOpen ? "Menu is Open" : "Menu is Closed"}
+  </p>
+
+</div>
     </nav>
   );
 }
