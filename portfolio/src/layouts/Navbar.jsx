@@ -27,7 +27,7 @@ function Navbar() {
             <li key={item.id}>
               <a
                 href={item.href}
-                className="text-white hover:text-cyan-400 transition duration-300"
+                className="text-white hover:text-cyan-400 transition-all duration-300"
               >
                 {item.title}
               </a>
@@ -37,14 +37,14 @@ function Navbar() {
 
         {/* Download CV Button */}
         <button
-          className="hidden md:block bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 transition duration-300"
+          className="hidden md:block bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 hover:scale-105 transition-all duration-300"
         >
           Download CV
         </button>
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-cyan-400 text-3xl"
+          className="md:hidden text-cyan-400 text-3xl hover:scale-110 transition-transform duration-300"
         >
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -66,9 +66,7 @@ function Navbar() {
               </li>
             ))}
 
-            <button className="bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold">
-              Download CV
-            </button>
+            
           </ul>
         </div>
       )}
