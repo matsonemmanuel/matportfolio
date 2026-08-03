@@ -24,18 +24,14 @@ export const navigation = [
     title: "Experience",
     href: "#experience",
   },
+  
   {
     id: 6,
-    title: "Education",
-    href: "#education",
+    title: "Certificates",
+    href: "#certificates",
   },
   {
     id: 7,
-    title: "Certificates",
-    href: "#certifications",
-  },
-  {
-    id: 8,
     title: "Contact",
     href: "#contact",
   },

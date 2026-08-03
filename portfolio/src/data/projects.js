@@ -5,25 +5,28 @@ import shamba from "../assets/images/shamba.png";
 import educore from "../assets/images/educore.png";
 
 export const projects = [
+
   {
-    id: 1,
-    title: "ShambaSmart",
-    description:
-      "AI-powered agricultural platform that helps farmers access weather forecasts, market prices, crop recommendations, and intelligent farming insights.",
+  id: 1,
+  title: "EduCore",
 
-    technologies: [
-      "React",
-      "FastAPI",
-      "SQLite",
-      "OpenAI API",
-    ],
+  description:
+    "A comprehensive education management system developed to streamline student registration, course management, academic records, and administrative operations for educational institutions.",
 
-    image: shamba,
+  technologies: [
+    "Java",
+    "MySQL",
+    "Java Swing",
+    "JDBC",
+  ],
 
-    github: "#",
+  image: educore,
 
-    demo: "#",
-  },
+  github: "#",
+
+  demo: "#",
+},
+  
 
   {
     id: 2,
@@ -69,23 +72,24 @@ export const projects = [
   },
 
   {
-  id: 4,
-  title: "EduCore",
+    id: 4,
+    title: "ShambaSmart",
+    description:
+      "AI-powered agricultural platform that helps farmers access weather forecasts, market prices, crop recommendations, and intelligent farming insights.",
 
-  description:
-    "A comprehensive education management system developed to streamline student registration, course management, academic records, and administrative operations for educational institutions.",
+    technologies: [
+      "React",
+      "FastAPI",
+      "SQLite",
+      "OpenAI API",
+    ],
 
-  technologies: [
-    "Java",
-    "MySQL",
-    "Java Swing",
-    "JDBC",
-  ],
+    image: shamba,
 
-  image: educore,
+    github: "#",
 
-  github: "#",
+    demo: "#",
+  },
 
-  demo: "#",
-}
+  
 ];
