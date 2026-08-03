@@ -1,5 +1,6 @@
-
 import { socialLinks } from "../constants/socialLinks";
+import { motion } from "framer-motion";
+import { fadeUp, zoomIn } from "../utils/animations";
 
 function Hero() {
   return (
@@ -11,37 +12,72 @@ function Hero() {
 
         <div className="grid lg:grid-cols-2 gap-20 items-center min-h-[85vh]">
 
-          {/* Left Side */}
+          {/* ================= LEFT SIDE ================= */}
+
           <div className="flex flex-col justify-center">
 
-            <p className="text-cyan-400 text-lg uppercase tracking-[6px] font-semibold mb-5">
-                Hello, I'm
-            </p>
+            {/* Greeting */}
 
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none mt-2">
+            <motion.p
+              {...fadeUp(0)}
+              className="text-cyan-400 text-lg uppercase tracking-[6px] font-semibold mb-5"
+            >
+              Hello, I'm
+            </motion.p>
+
+            {/* Name */}
+
+            <motion.h1
+              {...fadeUp(0.2)}
+              className="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-none mt-2"
+            >
               Emmanuel
               <br />
               Matson
-            </h1>
+            </motion.h1>
 
-            <h2 className="text-3xl font-semibold text-white mt-8">
-                Software Developer
-            </h2>
+            {/* Job Title */}
 
-            <div className="w-24 h-1 bg-cyan-400 rounded-full mt-5"></div>
+            <motion.h2
+              {...fadeUp(0.4)}
+              className="text-3xl font-semibold text-white mt-8"
+            >
+              Software Developer
+            </motion.h2>
 
-            <p className="text-cyan-400 text-lg mt-2">
-                Cybersecurity Enthusiast • AI Solutions Builder
-            </p>
+            {/* Divider */}
 
-            <p className="text-slate-400 text-lg leading-9 mt-10 max-w-xl">
-                I design and develop secure, intelligent, and scalable
-                software solutions that create real impact in education,
-                agriculture, and cybersecurity.
-            </p>
+            <motion.div
+              {...fadeUp(0.5)}
+              className="w-24 h-1 bg-cyan-400 rounded-full mt-5"
+            />
 
-            <div className="flex flex-col sm:flex-row gap-5 mt-12">
+            {/* Short Title */}
 
+            <motion.p
+              {...fadeUp(0.6)}
+              className="text-cyan-400 text-lg mt-2"
+            >
+              Cybersecurity Enthusiast • AI Solutions Builder
+            </motion.p>
+
+            {/* Description */}
+
+            <motion.p
+              {...fadeUp(0.8)}
+              className="text-slate-400 text-lg leading-9 mt-10 max-w-xl"
+            >
+              I design and develop secure, intelligent, and scalable
+              software solutions that create real impact in education,
+              agriculture, and cybersecurity.
+            </motion.p>
+
+            {/* Buttons */}
+
+            <motion.div
+              {...fadeUp(1)}
+              className="flex flex-col sm:flex-row gap-5 mt-12"
+            >
               <a
                 href="#projects"
                 className="bg-cyan-400 text-slate-900 px-8 py-4 rounded-xl font-semibold text-center hover:bg-cyan-300 hover:scale-105 transition-all duration-300 shadow-lg"
@@ -56,11 +92,14 @@ function Hero() {
               >
                 Download CV
               </a>
+            </motion.div>
 
-            </div>
+            {/* Social Icons */}
 
-            <div className="flex items-center gap-5 mt-10">
-
+            <motion.div
+              {...fadeUp(1.2)}
+              className="flex items-center gap-5 mt-10"
+            >
               {socialLinks.map((social) => {
                 const Icon = social.icon;
 
@@ -71,37 +110,32 @@ function Hero() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.label}
-                    className="w-12 h-12 rounded-full border border-cyan-400
-                              flex items-center justify-center
-                              text-cyan-400
-                              hover:bg-cyan-400
-                              hover:text-slate-900
-                              hover:scale-110
-                              transition-all duration-300"
+                    className="w-12 h-12 rounded-full border border-cyan-400 flex items-center justify-center text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 hover:scale-110 transition-all duration-300"
                   >
                     <Icon size={20} />
                   </a>
                 );
               })}
-
-            </div>
+            </motion.div>
 
           </div>
 
-          {/* Right Side */}
-          <div className="flex items-center justify-center min-h-[500px]">
+          {/* ================= RIGHT SIDE ================= */}
 
+          <motion.div
+            {...zoomIn(1.3)}
+            className="flex items-center justify-center min-h-[500px]"
+          >
             <div className="w-96 h-96 rounded-full border-4 border-cyan-400 flex items-center justify-center shadow-[0_0_60px_rgba(34,211,238,0.25)]">
 
-                <p className="text-cyan-400 text-center font-bold text-xl leading-8">
-                    Professional
-                    <br />
-                    Profile Photo
-                </p>
+              <p className="text-cyan-400 text-center font-bold text-xl leading-8">
+                Professional
+                <br />
+                Profile Photo
+              </p>
 
             </div>
-
-          </div>
+          </motion.div>
 
         </div>
 
