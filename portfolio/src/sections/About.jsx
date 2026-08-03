@@ -62,9 +62,16 @@ function About() {
             >
 
               <p className="text-cyan-400 text-xl font-semibold text-center">
-                Professional
-                <br />
-                About Image
+                <img
+                    src="/about.jpg"
+                    alt="About Emmanuel"
+                    className="
+                        w-full
+                        h-full
+                        object-cover
+                        rounded-3xl
+                    "
+                />
               </p>
 
             </div>

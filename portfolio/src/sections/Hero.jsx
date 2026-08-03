@@ -129,10 +129,53 @@ function Hero() {
             <div className="w-96 h-96 rounded-full border-4 border-cyan-400 flex items-center justify-center shadow-[0_0_60px_rgba(34,211,238,0.25)]">
 
               <p className="text-cyan-400 text-center font-bold text-xl leading-8">
-                Professional
-                <br />
-                Profile Photo
+                <img
+                    src="/profile.png"
+                    alt="Emmanuel Matson"
+                    className="
+                        w-80
+                        h-80
+                        object-cover
+                        rounded-full
+                        relative
+                        z-20
+                    "
+                />
               </p>
+              <div
+                  className="
+                      absolute
+                      inset-0
+                      flex
+                      items-center
+                      justify-center
+                      pointer-events-none
+                  "
+              >
+
+                  <span
+                      className="
+                          text-[260px]
+                          font-black
+                          text-cyan-400/10
+                          -translate-x-28
+                      "
+                  >
+                      &lt;
+                  </span>
+
+                  <span
+                      className="
+                          text-[260px]
+                          font-black
+                          text-cyan-400/5
+                          translate-x-28
+                      "
+                  >
+                      /&gt;
+                  </span>
+
+              </div>
 
             </div>
           </motion.div>

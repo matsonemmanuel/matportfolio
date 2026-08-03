@@ -1,89 +1,163 @@
-
-
-import { useState } from "react";
-import { navigation } from "../constants/navigation";
+import { useEffect, useState } from "react";
 import { FiMenu, FiX } from "react-icons/fi";
 
+import { navigation } from "../constants/navigation";
+import Logo from "../components/common/Logo";
+
 function Navbar() {
-  
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.4,
+      }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-slate-900 shadow-lg z-50">
+
       <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
 
-        
         {/* Logo */}
-        <a
-          href="#home"
-          className="text-cyan-400 text-3xl font-bold cursor-pointer"
-        >
-          {"<EM />"}
+
+        <a href="#home">
+          <Logo />
         </a>
 
-        {/* Navigation Links */}
-        <ul className="hidden md:flex gap-8">
+        {/* Navigation */}
+
+        <ul className="hidden md:flex gap-10">
+
           {navigation.map((item) => (
+
             <li key={item.id}>
+
               <a
                 href={item.href}
-                className="text-white hover:text-cyan-400 transition-all duration-300"
+                className={`
+                  relative
+                  pb-2
+                  transition-all
+                  duration-300
+                  ${
+                    activeSection === item.href.replace("#", "")
+                      ? "text-cyan-400"
+                      : "text-white hover:text-cyan-400"
+                  }
+                `}
               >
                 {item.title}
+
+                {activeSection === item.href.replace("#", "") && (
+                  <span className="absolute left-0 -bottom-1 w-full h-[2px] bg-cyan-400 rounded-full"></span>
+                )}
+
               </a>
+
             </li>
+
           ))}
+
         </ul>
 
-        {/* Download CV Button */}
+        {/* Desktop Button */}
+
         <a
           href="/cv.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden md:inline-flex items-center bg-cyan-400 text-slate-900 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-300 hover:scale-105 transition-all duration-300"
+          download
+          className="
+            hidden
+            md:inline-flex
+            items-center
+            bg-cyan-400
+            text-slate-900
+            px-6
+            py-3
+            rounded-xl
+            font-semibold
+            hover:bg-cyan-300
+            transition-all
+            duration-300
+          "
         >
           Download CV
         </a>
 
+        {/* Mobile Button */}
+
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-cyan-400 text-3xl cursor-pointer hover:scale-110 transition-transform duration-300"
+          className="md:hidden text-cyan-400 text-3xl cursor-pointer"
         >
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
+
       </div>
 
+      {/* Mobile Menu */}
+
       {isMenuOpen && (
+
         <div className="md:hidden bg-slate-800 px-8 py-6">
+
           <ul className="flex flex-col gap-6">
+
             {navigation.map((item) => (
+
               <li key={item.id}>
+
                 <a
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white hover:text-cyan-400 transition"
+                  className="text-white hover:text-cyan-400"
                 >
                   {item.title}
                 </a>
+
               </li>
+
             ))}
 
-            
           </ul>
 
           <a
             href="/cv.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
+            download
             onClick={() => setIsMenuOpen(false)}
-            className="mt-8 block text-center bg-cyan-400 text-slate-900 py-3 rounded-lg font-semibold hover:bg-cyan-300 transition"
+            className="
+              mt-8
+              block
+              text-center
+              bg-cyan-400
+              text-slate-900
+              py-3
+              rounded-lg
+              font-semibold
+            "
           >
             Download CV
           </a>
+
         </div>
+
       )}
 
-      
     </nav>
   );
 }
