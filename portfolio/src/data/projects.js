@@ -2,6 +2,7 @@
 import cyberwatch from "../assets/images/cyberwatch.png";
 import tng from "../assets/images/tng.png";
 import shamba from "../assets/images/shamba.png";
+import educore from "../assets/images/educore.png";
 
 export const projects = [
   {
@@ -66,4 +67,25 @@ export const projects = [
 
     demo: "#",
   },
+
+  {
+  id: 4,
+  title: "EduCore",
+
+  description:
+    "A comprehensive education management system developed to streamline student registration, course management, academic records, and administrative operations for educational institutions.",
+
+  technologies: [
+    "Java",
+    "MySQL",
+    "Java Swing",
+    "JDBC",
+  ],
+
+  image: educore,
+
+  github: "#",
+
+  demo: "#",
+}
 ];

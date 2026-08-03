@@ -26,23 +26,24 @@ export const skills = [
   },
 
   {
-    title: "Backend Development",
-    technologies: [
-      { name: "Python", icon: FaPython },
-      { name: "Flask", icon: FaServer },
-      { name: "FastAPI", icon: FaServer },
-    ],
-  },
+  title: "Backend Development",
+  technologies: [
+    { name: "Java", icon: FaCode },
+    { name: "Python", icon: FaPython },
+    { name: "Flask", icon: FaServer },
+    { name: "FastAPI", icon: FaServer },
+  ],
+},
 
   {
-    title: "Databases",
-    technologies: [
-      { name: "MongoDB", icon: FaDatabase },
-      { name: "SQLite", icon: FaDatabase },
-      { name: "MySQL", icon: FaDatabase },
-      { name: "Database Design", icon: FaDatabase },
-    ],
-  },
+  title: "Databases",
+  technologies: [
+    { name: "MySQL", icon: FaDatabase },
+    { name: "MongoDB", icon: FaDatabase },
+    { name: "SQLite", icon: FaDatabase },
+    { name: "Database Design", icon: FaDatabase },
+  ],
+},
 
   {
     title: "Cybersecurity",

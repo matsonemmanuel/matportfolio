@@ -8,9 +8,7 @@ function Projects() {
     >
       <div className="max-w-7xl mx-auto">
 
-        {/* ===================== */}
         {/* Section Heading */}
-        {/* ===================== */}
 
         <div className="text-center">
 
@@ -20,9 +18,7 @@ function Projects() {
 
           <h2 className="text-4xl md:text-5xl font-black text-white mt-4">
             Featured
-            <span className="text-cyan-400">
-              {" "}Projects
-            </span>
+            <span className="text-cyan-400"> Projects</span>
           </h2>
 
           <p className="text-slate-400 text-lg max-w-2xl mx-auto mt-6 leading-8">
@@ -33,9 +29,7 @@ function Projects() {
 
         </div>
 
-        {/* ===================== */}
         {/* Projects Grid */}
-        {/* ===================== */}
 
         <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10 mt-20">
 
@@ -44,6 +38,7 @@ function Projects() {
             <div
               key={project.id}
               className="
+                group
                 bg-slate-900
                 rounded-2xl
                 overflow-hidden
@@ -54,12 +49,15 @@ function Projects() {
                 hover:shadow-[0_0_35px_rgba(34,211,238,0.15)]
                 transition-all
                 duration-300
+                flex
+                flex-col
+                h-full
               "
             >
 
               {/* Project Image */}
 
-              <div className="h-56 overflow-hidden">
+              <div className="relative h-56 overflow-hidden">
 
                 <img
                   src={project.image}
@@ -70,29 +68,46 @@ function Projects() {
                     object-cover
                     transition-transform
                     duration-500
-                    hover:scale-110
+                    group-hover:scale-110
                   "
                 />
+
+                {/* Overlay */}
+
+                <div
+                  className="
+                    absolute
+                    inset-0
+                    bg-black/60
+                    opacity-0
+                    group-hover:opacity-100
+                    transition-all
+                    duration-500
+                    flex
+                    items-center
+                    justify-center
+                  "
+                >
+                  <h3 className="text-white text-2xl font-bold text-center px-4">
+                    {project.title}
+                  </h3>
+                </div>
 
               </div>
 
               {/* Project Content */}
 
-              <div className="p-8">
-
-                {/* Project Title */}
+              <div className="p-8 flex flex-col flex-1">
 
                 <h3 className="text-2xl font-bold text-white">
                   {project.title}
                 </h3>
 
-                {/* Project Description */}
-
                 <p className="text-slate-400 leading-8 mt-5">
                   {project.description}
                 </p>
 
-                {/* Technology Badges */}
+                {/* Technologies */}
 
                 <div className="flex flex-wrap gap-3 mt-6">
 
@@ -117,21 +132,25 @@ function Projects() {
 
                 </div>
 
-                {/* Action Buttons */}
+                {/* Buttons */}
 
-                <div className="flex justify-between mt-8">
+                <div className="flex justify-between mt-auto pt-8 gap-4">
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
+                      flex-1
+                      text-center
                       border
                       border-cyan-400
                       text-cyan-400
                       px-5
-                      py-2
+                      py-3
                       rounded-lg
+                      font-semibold
+                      cursor-pointer
                       hover:bg-cyan-400
                       hover:text-slate-900
                       transition-all
@@ -146,11 +165,15 @@ function Projects() {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="
+                      flex-1
+                      text-center
                       bg-cyan-400
                       text-slate-900
                       px-5
-                      py-2
+                      py-3
                       rounded-lg
+                      font-semibold
+                      cursor-pointer
                       hover:bg-cyan-300
                       transition-all
                       duration-300
