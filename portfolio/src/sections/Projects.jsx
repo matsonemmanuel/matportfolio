@@ -59,18 +59,21 @@ function Projects() {
 
               {/* Project Image */}
 
-              <div
-                className="
-                  h-56
-                  bg-slate-800
-                  flex
-                  items-center
-                  justify-center
-                "
-              >
-                <p className="text-cyan-400 font-semibold">
-                  Project Preview
-                </p>
+              <div className="h-56 overflow-hidden">
+
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="
+                    w-full
+                    h-full
+                    object-cover
+                    transition-transform
+                    duration-500
+                    hover:scale-110
+                  "
+                />
+
               </div>
 
               {/* Project Content */}

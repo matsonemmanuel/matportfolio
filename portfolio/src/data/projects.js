@@ -1,3 +1,8 @@
+
+import cyberwatch from "../assets/images/cyberwatch.png";
+import tng from "../assets/images/tng.png";
+import shamba from "../assets/images/shamba.png";
+
 export const projects = [
   {
     id: 1,
@@ -12,7 +17,7 @@ export const projects = [
       "OpenAI API",
     ],
 
-    image: "",
+    image: shamba,
 
     github: "#",
 
@@ -33,7 +38,7 @@ export const projects = [
       "Python",
     ],
 
-    image: "",
+    image: cyberwatch,
 
     github: "#",
 
@@ -55,7 +60,7 @@ export const projects = [
       "MongoDB",
     ],
 
-    image: "",
+    image: tng,
 
     github: "#",
 
