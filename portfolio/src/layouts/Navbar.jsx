@@ -120,10 +120,10 @@ function Navbar() {
             top-full
             left-0
             w-full
-            bg-slate-800
-            shadow-xl
+            bg-red-600
+            min-h-[300px]
+            z-[9999]
             md:hidden
-            z-50
           "
         >
 
