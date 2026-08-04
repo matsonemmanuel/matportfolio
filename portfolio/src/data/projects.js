@@ -3,6 +3,7 @@ import cyberwatch from "../assets/images/cyberwatch.png";
 import tng from "../assets/images/tng.png";
 import shamba from "../assets/images/shamba.png";
 import educore from "../assets/images/educore.png";
+import port from "../assets/images/port.png";
 
 export const projects = [
 
@@ -18,6 +19,8 @@ export const projects = [
     "MySQL",
     "Java Swing",
     "JDBC",
+    "JavaFX",
+    "Maven",
   ],
 
   image: educore,
@@ -85,6 +88,26 @@ export const projects = [
     ],
 
     image: shamba,
+
+    github: "#",
+
+    demo: "#",
+  },
+
+   {
+    id: 5,
+    title: "Portfolio Website",
+    description:
+      "A modern portfolio website showcasing my projects, skills, and contact information.",
+
+    technologies: [
+      "React",
+      "Framer Motion",
+      "Tailwind CSS",
+      "EmailJS",
+    ],
+
+    image: port,
 
     github: "#",
 
