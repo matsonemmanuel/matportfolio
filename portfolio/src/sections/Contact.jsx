@@ -229,7 +229,7 @@ function Contact() {
           >
 
             <h3 className="text-2xl font-bold text-white mb-8">
-              Send a Message
+              Send a message
             </h3>
 
             {success && (
