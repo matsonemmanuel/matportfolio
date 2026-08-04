@@ -113,11 +113,21 @@ function Navbar() {
       {/* Mobile Menu */}
 
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-slate-800 shadow-xl md:hidden">
 
-          <div className="md:hidden bg-slate-800 px-4 py-6">
+        <div
+          className="
+            absolute
+            top-full
+            left-0
+            w-full
+            bg-slate-800
+            shadow-xl
+            md:hidden
+            z-50
+          "
+        >
 
-          <ul className="flex flex-col gap-6">
+          <ul className="flex flex-col px-4 py-6 gap-6">
 
             {navigation.map((item) => (
 
@@ -126,7 +136,12 @@ function Navbar() {
                 <a
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="text-white hover:text-cyan-400"
+                  className="
+                    block
+                    text-white
+                    hover:text-cyan-400
+                    transition
+                  "
                 >
                   {item.title}
                 </a>
@@ -137,23 +152,27 @@ function Navbar() {
 
           </ul>
 
-          <a
-            href="/cv.pdf"
-            download
-            onClick={() => setIsMenuOpen(false)}
-            className="
-              mt-8
-              block
-              text-center
-              bg-cyan-400
-              text-slate-900
-              py-3
-              rounded-lg
-              font-semibold
-            "
-          >
-            Download CV
-          </a>
+          <div className="px-4 pb-6">
+
+            <a
+              href="/cv.pdf"
+              download
+              onClick={() => setIsMenuOpen(false)}
+              className="
+                block
+                w-full
+                text-center
+                bg-cyan-400
+                text-slate-900
+                py-3
+                rounded-lg
+                font-semibold
+                hover:bg-cyan-300
+                transition
+              "
+            >
+              Download CV
+            </a>
 
           </div>
 
