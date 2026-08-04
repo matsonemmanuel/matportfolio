@@ -30,9 +30,9 @@ function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-slate-900 shadow-lg z-50">
+    <nav className="fixed top-0 left-0 right-0 w-full bg-slate-900 shadow-lg z-50 overflow-x-hidden">
 
-      <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
 
         {/* Logo */}
 
@@ -103,7 +103,7 @@ function Navbar() {
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-cyan-400 text-3xl cursor-pointer"
+          className="md:hidden text-cyan-400 text-3xl p-2"
         >
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
@@ -113,8 +113,9 @@ function Navbar() {
       {/* Mobile Menu */}
 
       {isMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-slate-800 shadow-xl md:hidden">
 
-        <div className="md:hidden bg-slate-800 px-8 py-6">
+          <div className="md:hidden bg-slate-800 px-4 py-6">
 
           <ul className="flex flex-col gap-6">
 
@@ -153,6 +154,8 @@ function Navbar() {
           >
             Download CV
           </a>
+
+          </div>
 
         </div>
 

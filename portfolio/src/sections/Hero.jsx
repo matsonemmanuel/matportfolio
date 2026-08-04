@@ -124,17 +124,35 @@ function Hero() {
 
           <motion.div
             {...zoomIn(1.3)}
-            className="flex items-center justify-center min-h-[500px]"
+            className="relative flex items-center justify-center min-h-[500px] overflow-hidden"
           >
-            <div className="w-96 h-96 rounded-full border-4 border-cyan-400 flex items-center justify-center shadow-[0_0_60px_rgba(34,211,238,0.25)]">
+            <div
+              className="
+                relative
+                w-72
+                h-72
+                sm:w-80
+                sm:h-80
+                lg:w-96
+                lg:h-96
+                rounded-full
+                border-4
+                border-cyan-400
+                flex
+                items-center
+                justify-center
+                shadow-[0_0_60px_rgba(34,211,238,0.25)]
+                overflow-hidden
+              "
+            >
 
               <p className="text-cyan-400 text-center font-bold text-xl leading-8">
                 <img
                     src="/profile.png"
                     alt="Emmanuel Matson"
                     className="
-                        w-80
-                        h-80
+                        w-full
+                        h-full
                         object-cover
                         rounded-full
                         relative
@@ -146,6 +164,7 @@ function Hero() {
                   className="
                       absolute
                       inset-0
+                      overflow-hidden
                       flex
                       items-center
                       justify-center
@@ -155,10 +174,11 @@ function Hero() {
 
                   <span
                       className="
-                          text-[260px]
+                          text-[140px]
+                          sm:text-[180px]
+                          lg:text-[260px]
                           font-black
                           text-cyan-400/10
-                          -translate-x-28
                       "
                   >
                       &lt;
@@ -166,10 +186,11 @@ function Hero() {
 
                   <span
                       className="
-                          text-[260px]
+                          text-[140px]
+                          sm:text-[180px]
+                          lg:text-[260px]
                           font-black
                           text-cyan-400/5
-                          translate-x-28
                       "
                   >
                       /&gt;

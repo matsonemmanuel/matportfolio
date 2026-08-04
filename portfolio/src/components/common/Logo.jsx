@@ -4,10 +4,12 @@ function Logo() {
       className="
         flex
         items-center
-        text-4xl
         font-black
         tracking-tight
         select-none
+        whitespace-nowrap
+        text-3xl
+        sm:text-4xl
       "
     >
       <span className="text-cyan-400">&lt;</span>
