@@ -3,7 +3,7 @@ import cyberwatch from "../assets/images/cyberwatch.png";
 import tng from "../assets/images/tng.png";
 import shamba from "../assets/images/shamba.png";
 import educore from "../assets/images/educore.png";
-import portf from "../assets/images/portf.png";
+import port1 from "../assets/images/port1.png";
 
 export const projects = [
 
@@ -109,7 +109,7 @@ export const projects = [
       "Vercel",
     ],
 
-    image: portf,
+    image: port1,
 
     github: "#",
 
