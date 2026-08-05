@@ -3,7 +3,7 @@ export const contact = {
 
   email: "emmanuelmatson8@gmail.com",
 
-  phone: "+254 XXX XXX XXX",
+  phone: "+254 115 867 553",
 
   github: "https://github.com/matsonemmanuel",
 
