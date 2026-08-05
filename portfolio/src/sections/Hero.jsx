@@ -148,7 +148,7 @@ function Hero() {
 
               <p className="text-cyan-400 text-center font-bold text-xl leading-8">
                 <img
-                    src="/profile.png"
+                    src="/profile3.png"
                     alt="Emmanuel Matson"
                     className="
                         w-full

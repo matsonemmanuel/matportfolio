@@ -63,7 +63,7 @@ function About() {
 
               <p className="text-cyan-400 text-xl font-semibold text-center">
                 <img
-                    src="/about.jpg"
+                    src="/profile2.jpg"
                     alt="About Emmanuel"
                     className="
                         w-full
