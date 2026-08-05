@@ -5,7 +5,7 @@ export const certificates = [
     id: 1,
     title: "Cybersecurity Fundamentals",
     issuer: "IBM SkillsBuild",
-    year: "2026",
+    year: "2024",
     credential: "#",
   },
 
@@ -13,7 +13,7 @@ export const certificates = [
     id: 2,
     title: "Introduction to Artificial Intelligence",
     issuer: "IBM SkillsBuild",
-    year: "2026",
+    year: "2025",
     credential: "#",
   },
 
@@ -21,7 +21,7 @@ export const certificates = [
     id: 3,
     title: "Introduction to Large Language Models",
     issuer: "IBM SkillsBuild",
-    year: "2026",
+    year: "2025",
     credential: "#",
   },
 
