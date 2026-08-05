@@ -65,6 +65,7 @@ export const projects = [
       "JavaScript",
       "Flask",
       "MongoDB",
+      "Netflify",
     ],
 
     image: tng,
@@ -105,6 +106,7 @@ export const projects = [
       "Framer Motion",
       "Tailwind CSS",
       "EmailJS",
+      "Vercel",
     ],
 
     image: portf,
