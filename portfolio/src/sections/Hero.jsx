@@ -107,10 +107,25 @@ function Hero() {
                   <a
                     key={social.id}
                     href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={social.url.startsWith("#") ? "_self" : "_blank"}
+                    rel={social.url.startsWith("#") ? undefined : "noopener noreferrer"}
                     aria-label={social.label}
-                    className="w-12 h-12 rounded-full border border-cyan-400 flex items-center justify-center text-cyan-400 hover:bg-cyan-400 hover:text-slate-900 hover:scale-110 transition-all duration-300"
+                    className="
+                      w-12
+                      h-12
+                      rounded-full
+                      border
+                      border-cyan-400
+                      flex
+                      items-center
+                      justify-center
+                      text-cyan-400
+                      hover:bg-cyan-400
+                      hover:text-slate-900
+                      hover:scale-110
+                      transition-all
+                      duration-300
+                    "
                   >
                     <Icon size={20} />
                   </a>

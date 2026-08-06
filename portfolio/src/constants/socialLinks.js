@@ -14,13 +14,13 @@ export const socialLinks = [
   {
     id: 2,
     icon: FaLinkedin,
-    url: "https://linkedin.com/in/your-linkedin",
+    url: "https://www.linkedin.com/in/matson-emmanuel-17798632b/",
     label: "LinkedIn",
   },
   {
     id: 3,
     icon: FaEnvelope,
-    url: "mailto:emmanuelmatson8@gmail.com",
+    url: "#contact",
     label: "Email",
   },
 ];

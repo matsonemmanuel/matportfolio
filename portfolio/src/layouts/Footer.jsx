@@ -35,8 +35,8 @@ function Footer() {
                   <a
                     key={social.id}
                     href={social.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={social.url.startsWith("#") ? "_self" : "_blank"}
+                    rel={social.url.startsWith("#") ? undefined : "noopener noreferrer"}
                     className="
                       w-12
                       h-12
@@ -49,6 +49,7 @@ function Footer() {
                       text-cyan-400
                       hover:bg-cyan-400
                       hover:text-slate-900
+                      hover:scale-110
                       transition-all
                       duration-300
                     "
