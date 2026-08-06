@@ -25,7 +25,7 @@ export const projects = [
 
   image: educore,
 
-  github: "#",
+  github: "https://github.com/matsonemmanuel/EduCore",
 
   demo: "#",
 },
@@ -47,7 +47,7 @@ export const projects = [
 
     image: cyberwatch,
 
-    github: "#",
+    github: "https://github.com/matsonemmanuel/CyberWatch",
 
     demo: "#",
   },
@@ -70,7 +70,7 @@ export const projects = [
 
     image: tng,
 
-    github: "#",
+    github: "https://github.com/matsonemmanuel/The-next-gen",
 
     demo: "#",
   },
@@ -90,7 +90,7 @@ export const projects = [
 
     image: shamba,
 
-    github: "#",
+    github: "https://github.com/matsonemmanuel/ShambaSmart",
 
     demo: "#",
   },
@@ -111,7 +111,7 @@ export const projects = [
 
     image: port1,
 
-    github: "#",
+    github: "https://github.com/matsonemmanuel/matportfolio",
 
     demo: "#",
   },
