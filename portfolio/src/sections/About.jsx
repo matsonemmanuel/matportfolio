@@ -56,7 +56,10 @@ function About() {
 
           {/* Left */}
 
-          <div className="flex justify-center">
+          <motion.div
+            {...zoomIn(0.2)}
+            className="flex justify-center"
+          >
 
             <div
               className="
@@ -69,10 +72,12 @@ function About() {
                 items-center
                 justify-center
                 shadow-[0_0_50px_rgba(34,211,238,0.15)]
-                hover:scale-105
-                hover:shadow-[0_0_70px_rgba(34,211,238,0.30)]
+                hover:scale-[1.03]
+                hover:border-cyan-300
+                hover:shadow-[0_0_80px_rgba(34,211,238,0.35)]
                 transition-all
                 duration-500
+                ease-out
               "
             >
 
@@ -91,7 +96,7 @@ function About() {
 
             </div>
 
-          </div>
+          </motion.div>
 
           {/* Right */}
 
