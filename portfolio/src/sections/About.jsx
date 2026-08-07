@@ -5,6 +5,18 @@ import {
   FaBullseye,
 } from "react-icons/fa";
 
+import { motion } from "framer-motion";
+
+import {
+  fadeUp,
+  fadeLeft,
+  fadeRight,
+  zoomIn,
+  staggerContainer,
+  staggerItem,
+  expandWidth,
+} from "../utils/animations";
+
 
 function About() {
   return (
@@ -18,7 +30,10 @@ function About() {
         {/* Section Heading */}
         {/* ========================= */}
 
-        <div className="text-center mb-20">
+        <motion.div
+          {...fadeUp(0)}
+          className="text-center mb-20"
+        >
 
           <h2 className="text-cyan-400 uppercase tracking-[0.3em] text-sm font-semibold">
             About Me
@@ -31,7 +46,7 @@ function About() {
             </span>
           </h1>
 
-        </div>
+        </motion.div>
 
         {/* ========================= */}
         {/* Image + Text */}
